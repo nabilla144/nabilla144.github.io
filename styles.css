@@ -1,0 +1,522 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Gaya untuk header */
+header {
+  background-color: #d17703; /* Header background color */
+  color: white; /* Text color */
+  position: fixed; /* Keeps header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensures header stays above other elements */
+  padding: 10px 0; /* Adjusts the padding for a smaller height */
+}
+
+header .container {
+  display: flex;
+  align-items: center; /* Center aligns content vertically */
+  justify-content: space-between; /* Distributes space between items */
+  max-width: 1200px; /* Limiting the width */
+  margin: 0 auto; /* Centering container horizontally */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+header h1 a {
+  text-decoration: none;
+  color: white; /* Text color */
+  font-size: 1.5rem; /* Adjust font size for the header title */
+}
+
+header ul {
+  list-style: none;
+  display: flex; /* Aligns menu items horizontally */
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  margin-left: 15px; /* Spacing between menu items */
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white; /* Link color */
+  padding: 10px; /* Adjust padding for a smaller clickable area */
+  display: inline-block; /* Ensures padding is applied correctly */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+header ul li a:hover {
+  background-color: #b45c0a; /* Background color on hover */
+  color: #fff; /* Link color on hover */
+}
+
+.active {
+  background-color: #b45c0a; /* Active link color */
+  color: white; /* Active link text color */
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  header h1 a {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Menambahkan padding ke bagian atas konten utama */
+main {
+  margin-top: 60px; /* Menyesuaikan dengan tinggi header */
+}
+
+
+/* Gaya untuk menu dropdown */
+header .gallery-menu {
+  position: relative;
+}
+
+header .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #333;
+  padding: 10px;
+  list-style: none;
+}
+
+header .dropdown-menu li {
+  margin-bottom: 5px;
+}
+
+header .dropdown-menu li a {
+  color: #fff;
+}
+
+header .gallery-menu:hover .dropdown-menu {
+  display: block;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 200px 0;
+  position: relative; /* Added position relative for banner image */
+  overflow: hidden; /* Ensures no overflow of the image */
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover; /* Ensures the image covers the entire banner */
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+/* Gaya untuk tombol kembali ke atas */
+.back-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.back-to-top {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  background: #555;
+}
+
+/* Gaya untuk kalimat pembuka */
+.opening {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.opening .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Gaya untuk main section */
+main .container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* Styles for Galeri Wisata section */
+#galeri-wisata {
+  background-color: #f9f9f9; /* Background color for the section */
+  padding: 50px 0; /* Padding for top and bottom */
+  text-align: center; /* Center align text */
+}
+
+#galeri-wisata .container {
+  max-width: 960px; /* Limit container width */
+  margin: 0 auto; /* Center container horizontally */
+  padding: 0 20px; /* Padding inside container */
+}
+
+#galeri-wisata .section-title {
+  margin-bottom: 40px; /* Spacing below section title */
+}
+
+#galeri-wisata .section-title h1 {
+  font-size: 2.5rem; /* Title font size */
+  color: #333; /* Title color */
+}
+
+#galeri-wisata .line {
+  width: 50px; /* Width of the line */
+  height: 3px; /* Height of the line */
+  background-color: #d17703; /* Line color */
+  margin: 20px auto; /* Margin around the line */
+}
+
+#galeri-wisata .galeri-wisata {
+  display: grid; /* Use CSS grid for gallery layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+  gap: 20px; /* Gap between gallery items */
+  justify-items: center; /* Center items horizontally */
+}
+
+#galeri-wisata .galeri {
+  background-color: #fff; /* Background color for gallery items */
+  padding: 20px; /* Padding inside gallery items */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for gallery items */
+}
+
+#galeri-wisata .galeri img {
+  width: 100%; /* Ensure images fill their container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 15px; /* Spacing below images */
+}
+
+#galeri-wisata .galeri h3 {
+  font-size: 1.5rem; /* Title font size */
+  color: #333; /* Title color */
+}
+
+#galeri-wisata .galeri p {
+  font-size: 1rem; /* Paragraph font size */
+  color: #666; /* Paragraph color */
+}
+.galeri:hover {
+  transform: scale(1.05);
+}
+
+/* Gaya untuk galeri */
+
+main {
+  text-align: center;
+  
+}
+
+.overlay-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay-info h4,
+.overlay-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* CSS untuk layout galeri */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.bg-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* Mengatur flex item agar dapat menyesuaikan ukuran container */
+  display: flex;
+}
+
+.gambar {
+  flex: 1 1 50%; /* Ukuran gambar 50% dari lebar card */
+}
+
+.gambar img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.05);
+}
+
+.des-card {
+  flex: 1 1 50%; /* Ukuran deskripsi 50% dari lebar card */
+  padding: 20px;
+}
+
+.des-card h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.des-card p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Mengatur tata letak stack di bawah 768px lebar layar */
+  }
+
+  .gambar,
+  .des-card {
+    flex: 1 1 100%; /* Ukuran penuh untuk stack di bawah 768px */
+  }
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-more:hover {
+  background-color: #555;
+  
+}
+
+/* Gaya untuk about section */
+main.about {
+  text-align: center; /* Memastikan teks berada di tengah */
+  padding: 50px 0;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.photo {
+  margin-right: 20px;
+}
+
+.details {
+  text-align: left; /* Mengatur teks rata kiri */
+  flex: 1; /* Memanfaatkan ruang yang tersedia di dalam flex container */
+}
+
+.details p {
+  margin-bottom: 10px; /* Memberikan jarak antar paragraf */
+}
+
+.details a.button {
+  display: inline-block; /* Membuat tombol menjadi inline block */
+  padding: 10px 15px; /* Memberikan padding pada tombol */
+  background-color: #333; /* Warna latar belakang tombol */
+  color: #fff; /* Warna teks tombol */
+  text-decoration: none; /* Menghilangkan dekorasi teks */
+  border-radius: 5px; /* Mengatur border-radius untuk tombol */
+  transition: background-color 0.3s; /* Transisi warna latar belakang saat hover */
+}
+
+.details a.button:hover {
+  background-color: #555; /* Warna latar belakang saat tombol dihover */
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-section .contact-info {
+  margin-bottom: 40px;
+}
+
+.contact-section .contact-info p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Form styles */
+#contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(249, 246, 246, 0.1);
+}
+
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact-form textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+#contact-form button[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 8px;
+  }
+}
+
+
+/* Gaya untuk section home */
+.home-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff; /* Warna latar belakang jika gambar tidak tersedia */
+  background-image: url('img/grojogan 2.jpg'); /* Ganti dengan jalur gambar Anda */
+  background-size: cover; /* Menyesuaikan ukuran gambar agar menutupi seluruh elemen */
+  background-position: center; /* Memastikan gambar berada di tengah elemen */
+  background-repeat: no-repeat; /* Mencegah gambar diulang jika lebih kecil dari elemen */
+  color: #fff; /* Mengatur warna teks menjadi putih */
+}
+
+
+.home-section .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background:chocolate;
+  color:wheat;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.home-section .btn:hover {
+  background: #e9e5e5;
+}
+
+/* Gaya untuk footer */
+footer {
+  background:chocolate;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .social-media {
+  list-style: none;
+  padding: 0;
+}
+
+footer .social-media li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer .social-media li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .social-media li a:hover {
+  color: #ddd;
+}
